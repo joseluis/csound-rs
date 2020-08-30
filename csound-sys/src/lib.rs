@@ -1002,16 +1002,12 @@ extern "C" {
 
     pub fn csoundSetDrawGraphCallback(
         arg1: *mut CSOUND,
-        drawGraphCallback_: Option<
-            unsafe extern "C" fn(arg1: *mut CSOUND, windat: *mut WINDAT),
-        >,
+        drawGraphCallback_: Option<unsafe extern "C" fn(arg1: *mut CSOUND, windat: *mut WINDAT)>,
     );
 
     pub fn csoundSetKillGraphCallback(
         arg1: *mut CSOUND,
-        killGraphCallback_: Option<
-            unsafe extern "C" fn(arg1: *mut CSOUND, windat: *mut WINDAT),
-        >,
+        killGraphCallback_: Option<unsafe extern "C" fn(arg1: *mut CSOUND, windat: *mut WINDAT)>,
     );
 
     pub fn csoundSetExitGraphCallback(
@@ -1033,15 +1029,9 @@ extern "C" {
         thread: c_int,
         outypes: *const c_char,
         intypes: *const c_char,
-        iopadr: Option<
-            unsafe extern "C" fn(arg1: *mut CSOUND, arg2: *mut c_void) -> c_int,
-        >,
-        kopadr: Option<
-            unsafe extern "C" fn(arg1: *mut CSOUND, arg2: *mut c_void) -> c_int,
-        >,
-        aopadr: Option<
-            unsafe extern "C" fn(arg1: *mut CSOUND, arg2: *mut c_void) -> c_int,
-        >,
+        iopadr: Option<unsafe extern "C" fn(arg1: *mut CSOUND, arg2: *mut c_void) -> c_int>,
+        kopadr: Option<unsafe extern "C" fn(arg1: *mut CSOUND, arg2: *mut c_void) -> c_int>,
+        aopadr: Option<unsafe extern "C" fn(arg1: *mut CSOUND, arg2: *mut c_void) -> c_int>,
     ) -> c_int;
 
     pub fn csoundSetYieldCallback(
